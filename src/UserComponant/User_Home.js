@@ -13,11 +13,13 @@ const User_Home = () => {
   const token = localStorage.getItem("UserToken");
   const [serviceinfo, Setserviceinfo] = useState([]);
   const [loader, Setloader] = useState(false);
-  useEffect(() => {
+  const api = process.env.REACT_APP_API_KEY;
+  console.log("API Key:", api);
+  useEffect(() => {   
     //TO verify wheather the user is valid one or not by the token stored in the local storage
     const verifyUser = async () => {
       try {
-        const result = await axios.get("http://localhost:3001/home", {
+        const result = await axios.get("https://alex-tune-up-api.onrender.com/home", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -35,7 +37,7 @@ const User_Home = () => {
   //to get the service details to showcase to  the user
   useEffect(() => {
     axios
-      .get("http://localhost:3001/getservicedetails")
+      .get(`https://alex-tune-up-api.onrender.com/getservicedetails`)
       .then((res) => {
         Setserviceinfo(res.data);
         Setloader(true);

@@ -12,7 +12,7 @@ const Bottomnav = () => {
   //To Get the USer information Based on the User id stored in the local storage
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/getUserinfo/${userid}`)
+      .get(`https://alex-tune-up-api.onrender.com/getUserinfo/${userid}`)
       .then((res) => Setuserinfo(res.data))
       .catch((error) => console.log(error));
   }, {});

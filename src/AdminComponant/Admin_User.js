@@ -8,7 +8,7 @@ const Admin_User = () => {
   //TO Get all the user information
   useEffect(() => {
     axios
-      .get("http://localhost:3001/getuser")
+      .get("https://alex-tune-up-api.onrender.com/getuser")
       .then((res) => {
         Setuser(res.data);
         Setloader(true);

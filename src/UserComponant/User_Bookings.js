@@ -28,7 +28,7 @@ const User_Bookings = () => {
   //TO get the Service Details
   useEffect(() => {
     axios
-      .get("http://localhost:3001/getservicedetails")
+      .get("https://alex-tune-up-api.onrender.com/getservicedetails")
       .then((res) => {
         Setserviceinfo(res.data);
       })
@@ -37,7 +37,7 @@ const User_Bookings = () => {
   //To get the user email id for mail purpose using the user id in the local storage
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/getemail/${userid}`)
+      .get(`https://alex-tune-up-api.onrender.com/getemail/${userid}`)
       .then((res) => Setemail(res.data))
       .catch((error) => console.log(error));
   }, [userid]);
@@ -58,7 +58,7 @@ const User_Bookings = () => {
     const serviceDetails = await Promise.all(
       service.map(async (serviceName) => {
         const res = await axios.get(
-          `http://localhost:3001/getservicedays/${serviceName}`
+          `https://alex-tune-up-api.onrender.com/getservicedays/${serviceName}`
         );
         return res.data[0];
       })
@@ -79,7 +79,7 @@ const User_Bookings = () => {
     e.preventDefault();
     toast.success("Your Bookings Is In Progress ");
     try {
-      await axios.post("http://localhost:3001/SaveServiceData", {
+      await axios.post("https://alex-tune-up-api.onrender.com/SaveServiceData", {
         email,
         name,
         bikenumber,

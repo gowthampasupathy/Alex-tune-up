@@ -22,7 +22,7 @@ const User_Service = () => {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://localhost:3001/getservicebyId/${id}`)
+        .get(`https://alex-tune-up-api.onrender.com/getservicebyId/${id}`)
         .then((res) => {
           Setserviceinfo(res.data);
           Setloader(true);

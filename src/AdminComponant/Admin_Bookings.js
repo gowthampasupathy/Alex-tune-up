@@ -17,7 +17,7 @@ const Admin_Bookings = () => {
   useEffect(() => {
     const verifyUser = async () => {
       try {
-        const result = await axios.get("http://localhost:3001/bookings", {
+        const result = await axios.get("https://alex-tune-up-api.onrender.com/bookings", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -36,7 +36,7 @@ const Admin_Bookings = () => {
   //To get the booking details based on the status
   const getbookings = async (bookingstatus) => {
     await axios
-      .get(`http://localhost:3001/getbookingdetails/${bookingstatus}`)
+      .get(`https://alex-tune-up-api.onrender.com/getbookingdetails/${bookingstatus}`)
       .then((res) => {
         setbooking(res.data);
         Setloader(true);
@@ -57,7 +57,7 @@ const Admin_Bookings = () => {
   const handleSubmit = async (id, status) => {
     //Update Status and Send Completed Mail to user
     await axios
-      .put(`http://localhost:3001/updateBookingstatus/${id}`, { status })
+      .put(`https://alex-tune-up-api.onrender.com/updateBookingstatus/${id}`, { status })
       .then((res) => {
         let bookingstatus = " ";
         if (activetab === 1) {

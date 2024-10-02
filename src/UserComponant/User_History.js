@@ -13,7 +13,7 @@ const User_History = () => {
   // TO get the all the booking history of the certian user by the user it
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/getBookinghistory/${userid}`)
+      .get(`https://alex-tune-up-api.onrender.com/getBookinghistory/${userid}`)
       .then((res) => {
         Sethistory(res.data);
         Setloader(true);

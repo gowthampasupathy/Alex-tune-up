@@ -35,7 +35,7 @@ const Signup = () => {
   const Getotp = () => {
     //To get the Otp for the email validation
     axios
-      .post("http://localhost:3001/getotp", { email })
+      .post("https://alex-tune-up-api.onrender.com/getotp", { email })
       .then((res) => {
         if (res.data == "Email Sent To User") {
           toast.success(" Otp Sent Successfully");
@@ -47,7 +47,7 @@ const Signup = () => {
   //To check the otp is valid or not which is entered by the user
   const Verifyotp = () => {
     axios
-      .post("http://localhost:3001/verifyotp", { email, otp })
+      .post("https://alex-tune-up-api.onrender.com/verifyotp", { email, otp })
       .then((res) => {
         if (res.data == "OTP Verified") {
           Setbtnclass("signinbutton");
@@ -58,7 +58,7 @@ const Signup = () => {
   //TO create the new acccount for the user based on the provided information
   const Submit = () => {
     axios
-      .post("http://localhost:3001/signup", {
+      .post("https://alex-tune-up-api.onrender.com/signup", {
         name,
         email,
         phonenumber,
@@ -72,7 +72,7 @@ const Signup = () => {
   //To check the email already exit in the Db or not
   const checkemail = (email) => {
     axios
-      .post("http://localhost:3001/getemail", { email })
+      .post("https://alex-tune-up-api.onrender.com/getemail", { email })
       .then((res) => {
         if (res.data === "yes") {
           Setemailerror("Email Already Exist");

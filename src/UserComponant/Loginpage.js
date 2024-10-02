@@ -21,7 +21,7 @@ const Loginpage = () => {
     Setopacity(0.6);
     Setbtnval("logging In Please Wait");
     await axios
-      .post("http://localhost:3001/login", { email, password })
+      .post("https://alex-tune-up-api.onrender.com/login", { email, password })
       .then((res) => {
         if (res.data.status === "success") {
           Setemailerror("");

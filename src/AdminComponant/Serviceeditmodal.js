@@ -19,7 +19,7 @@ const Serviceeditmodal = (props) => {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://localhost:3001/getservicebyId/${id}`)
+        .get(`https://alex-tune-up-api.onrender.com/getservicebyId/${id}`)
         .then((res) => Setservice(res.data))
         .catch((error) => console.log(error));
     }
@@ -35,7 +35,7 @@ const Serviceeditmodal = (props) => {
   //To update the service Details Based on the ID
   const getDetails = () => {
     axios
-      .put(`http://localhost:3001/updateservicebyId/${id}`, { service })
+      .put(`https://alex-tune-up-api.onrender.com/updateservicebyId/${id}`, { service })
       .then((res) => {
         onHide();
         window.location.reload();

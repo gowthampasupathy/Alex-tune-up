@@ -9,7 +9,7 @@ const Servicedetailmodal = (props) => {
   //TO get the service details based on the service ID
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/getdata/${id}`)
+      .get(`https://alex-tune-up-api.onrender.com/getdata/${id}`)
       .then((res) => {
         const result = res.data;
         Setservicedetails(result);

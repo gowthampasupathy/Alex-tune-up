@@ -42,7 +42,7 @@ const Admin_Service = () => {
   //To Delete the service information Based On the id
   const deleteService = (id) => {
     axios
-      .delete(`http://localhost:3001/deletebyId/${id}`)
+      .delete(`https://alex-tune-up-api.onrender.com/deletebyId/${id}`)
       .then((res) => {
         Settrackchange(2);
         window.location.reload();
@@ -52,7 +52,7 @@ const Admin_Service = () => {
   //TO Save the Service Details in to the database
   const handleSubmit = () => {
     axios
-      .post("http://localhost:3001/saveService", {
+      .post("https://alex-tune-up-api.onrender.com/saveService", {
         coverimageurl,
         detailimageurl,
         servicetitle,
@@ -66,7 +66,7 @@ const Admin_Service = () => {
   //To Get all the available service details to display in table
   useEffect(() => {
     axios
-      .get("http://localhost:3001/getservicedetails")
+      .get("https://alex-tune-up-api.onrender.com/getservicedetails")
       .then((res) => {
         Setservice(res.data);
         Setloader(true);
