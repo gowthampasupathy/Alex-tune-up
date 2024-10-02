@@ -1,0 +1,263 @@
+
+:root{
+    background-color: #171717;
+}
+.overalldiv{
+    width: 100%;
+    height: 100vh;
+    background-color: black;  
+}
+.servicecontent{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #171717;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    padding: 20px;
+    }
+    .heading{
+        width: 100%;
+        text-align: center;
+        letter-spacing: 5px;
+        
+    }
+    .headingdiv{
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        margin-top: 80px;
+        width: auto;
+        color: white;
+    }
+    .active-tab{
+        margin: 7px;
+        padding: 7px;
+        cursor: pointer;
+        color: var(--primary);
+        border-bottom: 3px solid var(--primary);
+       
+    }
+    .tab{
+        margin: 7px;
+        padding: 7px;
+        cursor: pointer;
+
+       
+    }
+    .content{
+        display: none;
+       
+    }
+    .active-content{
+        display: block;
+        padding: 30px;
+        background-color: #171717;
+    }
+   .form{
+    padding: 30px;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+   }
+   .serviceinput{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+   }
+   .serviceinput-cost{
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+   }
+   .input-flex-div{
+    display: flex;
+    width: 100%;
+   }
+   .input-flex-item{
+    flex: 50%;
+   }
+   .servicebtn{
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 40px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: var(--primary);
+    border: var(--primary);
+    
+   }
+   .cost-time-div{
+    display: flex;
+    width: 100%;
+   }
+   .input{
+    width: 100%;
+    margin: 10px;
+    height: 35px;
+    background-color: #171717;
+    border-radius: 5px;
+    border-color: #171717;
+    color: white;
+    padding: 5px;
+
+   }
+.cost-time{
+    flex: 50% ;
+    margin: 3px;
+}
+.details{
+    padding: 5px;
+}
+.textarea{
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.btn-div{
+    display: flex;
+    justify-content: end;
+}
+.add-btn-sm{
+    padding: 2px;
+    width: 50%;
+    margin-right: 50px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: var(--primary);
+    border: var(--primary);
+    height: 40px;
+    
+}
+.add-btn{
+    padding: 2px;
+    width: 20%;
+    margin-right: 50px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: var(--primary);
+    border: var(--primary);
+    height: 40px;
+    
+}
+table{
+border-collapse: collapse;
+  width: 100%;
+  
+}
+td{
+    border: 5px solid #ddd;
+    padding: 20px;
+    color: white;
+
+}
+th{
+    border: 5px solid #ddd;
+    padding: 20px;
+}
+tr:hover {background-color: #454545;}
+/* tr:nth-child(even){background-color: #f2f2f2;}
+ tr:hover {background-color: #ddd;} */
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:var(--primary);
+    color: rgb(0, 0, 0);
+  }
+@media only screen and (max-width:600px) {
+.cost-time-div{
+    flex-direction: column;
+}
+.input-flex-div{
+    display: flex;
+    flex-direction: column;
+}
+    .form{
+        padding: 0px;
+        margin: 0px;
+    }
+    .input-flex-item{
+        display: flex;
+        flex-direction: column;
+    }
+    .servicebtn{
+        width: 80%;
+        margin-left: 0px;
+    }
+    .user-table thead{
+        display: none;
+      }
+      .user-table, .user-table tbody, .user-table tr, .user-table td{
+        display: block;
+        width: 100%;
+      }
+      .user-table tr{
+        margin-bottom: 30px;
+      }
+      .user-table tbody tr td{
+        text-align: right;
+        justify-items: end;
+        padding-left: 50%;
+        position: relative;
+  
+      }
+      .user-table td::before{
+        content: attr(aria-label);
+        position:absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 1px;
+        font-weight: bolder;
+        font-size: 19px;
+        text-align: left;
+  
+  
+      }
+      .user-table button{
+        width: 100%;
+      }
+      .add-btn{
+        width: 100%;
+      }
+}
+.Userinfodiv{
+    margin-top: 85px;
+    color: white;
+    background-color: #171717;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    padding: 10px;
+
+}
+.userinfotable{
+    padding: 30px;
+}
+.service-head{
+    border-bottom: 3px solid var(--primary);
+    display: inline-block;
+}
+.detailrow{
+    color: #171717;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    
+}
+.detaildata{
+    flex: 30%;
+    font-weight: bolder;
+}

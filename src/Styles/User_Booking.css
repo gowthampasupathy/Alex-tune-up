@@ -1,0 +1,87 @@
+.bookingdiv{
+    width: 45%;
+    margin: auto;
+}
+
+ .booking{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+.optnn{
+    padding-bottom: 10px;
+}
+.optn{
+    display: inline; 
+    padding: 10px 25px;
+}
+
+.subm{
+    width: 100%;
+    background-color: var(--primary);
+    color: rgb(0, 0, 0);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+ .subm:hover {
+    background-color: rgb(35, 88, 221);
+  }
+.bookcfm{
+    text-align: center;
+    margin-top: 20%;
+}
+.slabel{
+  font-size: 20px;
+  margin-left: 5px; 
+}
+.chk{
+  margin-top: 8px;
+}
+.calc{
+  width: 100%;
+    background-color: var(--primary);
+    color: rgb(0, 0, 0);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.calc:hover{
+  background-color: rgb(35, 88, 221);
+}
+.estimate-data{
+  display: flex;
+  justify-content: space-between;
+}
+.option-checkbox{
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 600px){
+  .bookingdiv{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+
+  .estimate-data{
+    flex-direction: column;
+  }
+  .option-checkbox{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    flex-wrap: wrap;
+  }
+}

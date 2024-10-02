@@ -1,0 +1,44 @@
+:root{
+    background-color: #171717;
+}
+.bookingstab{
+    margin-top: 85px;
+    background-color: #171717;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+@media screen and (max-width: 600px){
+    .booking-table thead{
+        display: none;
+      }
+      .booking-table, .booking-table tbody, .booking-table tr, .booking-table td{
+        display: block;
+        width: 100%;
+      }
+      .booking-table tr{
+        margin-bottom: 30px;
+      }
+      .booking-table button{
+        width: 100%;
+      }
+      .booking-table tbody tr td{
+        text-align: right;
+        justify-items: end;
+        padding-left: 50%;
+        position: relative;
+  
+      }
+      .booking-table td::before{
+        content: attr(aria-label);
+        position:absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bolder;
+        font-size: 19px;
+        text-align: left;
+  
+  
+      }
+}
